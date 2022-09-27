@@ -35,7 +35,7 @@ This solution of standardizing resumes comes with the requirements that companie
 
 |     Field      |  Type  | Required |         Supported Formats         |              Purpose              |
 | -------------- | ------ | -------- | --------------------------------- | --------------------------------- |
-| Name           | any    | Depends  | [Name](#name)                     | Define whom it is                 |
+| Name           | any    | Yes  | [Name](#name)                     | Define whom it is                 |
 | Phone          | number | Depends  | [Phone](#phone)                   | Contact (Only 1 form required)    |
 | Email          | string | Depends  | [Email](#email)                   | Contact (Only 1 form required)    |
 | Location       | any    | true     | [Location](#location)             | Taxes/Onboarding, Legalities, etc |

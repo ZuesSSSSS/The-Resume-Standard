@@ -35,7 +35,7 @@ This solution of standardizing resumes comes with the requirements that companie
 
 |     Field      |  Type  | Required |         Supported Formats         |              Purpose              |
 | -------------- | ------ | -------- | --------------------------------- | --------------------------------- |
-| Name           | any    | Depends  | [Name](#name)                     | Define whom it is                 |
+| Name           | any    | Yes  | [Name](#name)                     | Define whom it is                 |
 | Phone          | number | Depends  | [Phone](#phone)                   | Contact (Only 1 form required)    |
 | Email          | string | Depends  | [Email](#email)                   | Contact (Only 1 form required)    |
 | Availability   | any    | Yes      | [Availability](#availability)     | Share future scheduling availability |
@@ -45,6 +45,7 @@ This solution of standardizing resumes comes with the requirements that companie
 | Skills         | any    | false    | [Skills](#skills)                 | Set job search aim with skills and show defining abilities |
 | Certifications | any    | false    | [Certifications](#certifications) | Show industry licenses/Certifications |
 | Links          | any    | false    | [Links](#links)                   | Show projects and show skills |
+| Language       | string | yes      | [Language](#language)             | Identify communication language |
 
 TODO: Resume Creator + Reader Link
 
@@ -256,4 +257,20 @@ TODO: Resume Creator + Reader Link
       Example
          "Links": [
             "https://github.com/thundeR2GE"
+         ]
+
+### Language
+
+- Type: any;
+- Required: false;
+
+      Supported
+         "language": [
+            ""
+         ]
+
+      Example
+         "Language": [
+            "English",
+            "Spanish"
          ]

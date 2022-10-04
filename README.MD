@@ -38,6 +38,7 @@ This solution of standardizing resumes comes with the requirements that companie
 | Name           | any    | Depends  | [Name](#name)                     | Define whom it is                 |
 | Phone          | number | Depends  | [Phone](#phone)                   | Contact (Only 1 form required)    |
 | Email          | string | Depends  | [Email](#email)                   | Contact (Only 1 form required)    |
+| Availability   | any    | Yes      | [Availability](#availability)     | Share future scheduling availability |
 | Location       | any    | true     | [Location](#location)             | Taxes/Onboarding, Legalities, etc |
 | Experience     | any    | false    | [Experience](#experience)         | Share previous professional experience |
 | Projects       | any    | false    | [Projects](#projects)             | Show skills off and use as experience |
@@ -54,9 +55,9 @@ TODO: Resume Creator + Reader Link
 
       Supported
          "Name": {
-               "first": string;
-               "middle": string;
-               "last": string;
+               "first": ,
+               "middle": ,
+               "last": ,
             }
 
       Example
@@ -83,14 +84,42 @@ TODO: Resume Creator + Reader Link
 
 [Regex](https://emailregex.com/)
 
-- Type: string;
+- Type: ,
 - Required: Depends; (One form of contact required)
 
       Supported
-         "Name": string;
+         "Name": ,
 
       Example
          "Name": "davidmudriy@pm.me",
+
+### Availability
+
+- Type: any;
+- Required: yes;
+
+      Supported
+         "Available": }
+            "Summary": , // : "On-going changes", "Full-time", "Part-time" 
+            "Sunday": , // : *start* HHmm -- *End* HHmm || null
+            "Monday": , // : *start* HHmm -- *End* HHmm || null
+            "Tuesday": , // : *start* HHmm -- *End* HHmm || null
+            "Wednesday": , // : *start* HHmm -- *End* HHmm || null
+            "Thursday": , // : *start* HHmm -- *End* HHmm || null
+            "Friday": , // : *start* HHmm -- *End* HHmm || null
+            "Saturday": , // : *start* HHmm -- *End* HHmm || null
+         }
+      Example
+         "Available": }
+            "Summary": "Full-time",
+            "Sunday": "0810--1400",
+            "Monday": "0810--1400",
+            "Tuesday": "0810--1400",
+            "Wednesday": "0810--1400",
+            "Thursday": "0810--1400",
+            "Friday": null,
+            "Saturday": null,
+         }
 
 ### Location
 
@@ -99,9 +128,9 @@ TODO: Resume Creator + Reader Link
 
       Supported
          "Location": {
-            "city": string;
-            "region": string;
-            "country": string;
+            "city": ,
+            "region": ,
+            "country": ,
          }
 
       Example
@@ -119,10 +148,10 @@ TODO: Resume Creator + Reader Link
       Supported
          "Experience": [
             {
-               "title": string; 
-               "company": string; 
-               "startDate": string; // (yyyy-mm-dd),
-               "endDate": string;  // (yyyy-mm-dd),
+               "title": , 
+               "company": , 
+               "startDate": , // (yyyy-mm-dd),
+               "endDate": ,  // (yyyy-mm-dd),
                "descriptions": any; // array
             }
          ]
@@ -149,10 +178,10 @@ TODO: Resume Creator + Reader Link
       Supported
          "Experience": [
             {
-               "title": string; 
-               "company": string; 
-               "startDate": string; // (yyyy-mm-dd),
-               "endDate": string;  // (yyyy-mm-dd),
+               "title": , 
+               "company": , 
+               "startDate": , // (yyyy-mm-dd),
+               "endDate": ,  // (yyyy-mm-dd),
                "descriptions": any; // array
             }
          ]
@@ -195,10 +224,10 @@ TODO: Resume Creator + Reader Link
       Supported
          "Certifications": [
             {
-               "Certification": string; 
-               "IssueDate": string; // (yyyy-mm-dd),
-               "ExpDate": string; // (yyyy-mm-dd),
-               "ID": string;
+               "Certification": , 
+               "IssueDate": , // (yyyy-mm-dd),
+               "ExpDate": , // (yyyy-mm-dd),
+               "ID": ,
                "Link": any; // array
             }
          ]
